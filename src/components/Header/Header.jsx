@@ -1,6 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './header.module.css'
-import Modal from '../Modal/Modal';
+// import Modal from '../Modal/Modal';
 
 const Header = () => {
     return (
@@ -8,10 +9,10 @@ const Header = () => {
         <header>
             <div className={styles.wrapper} >
                 <nav className={styles.nav}>
-                    <a href="/" className={styles.link}>Home</a>
-                    <a href="/" className={styles.link}>Shop</a>
-                    <a href="/" className={styles.link}>About</a>
-                    <a href="/" className={styles.link}>Contact</a>
+                    <NavLink to='/' className={styles.link} >Home</NavLink>
+                    <NavLink to='/catalog' className={styles.link} >Shop</NavLink>
+                    <NavLink  to='/' className={styles.link} >About</NavLink>
+                    <NavLink to='/' className={styles.link} >Contact</NavLink>
                 </nav>
                 <div className={styles.icons}>
                     <a href="/" className={styles.icon}>

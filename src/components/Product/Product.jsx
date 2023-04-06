@@ -1,19 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './product.module.css'
 
-const Product = () => {
-    const gridView = true
+
+const Product = ({_id, img, title, price, createdAt, productView}) => {
+
     return (
-        <div className={gridView ? styles.card : styles["card-list"]}>
-            <img src="" alt="" className={styles.img} />
+        <div className={styles[`view-${productView}`]}>
+            <img src={img} alt="" className={styles.img} />
             <div className={styles.info}>
-                <a href="/" className={styles.name}>
-                Test Title
-                </a>
+                <Link href={`/catalog/${_id}`} className={styles.name}>
+                {title}
+                </Link>
                 <h4 className={styles.price}>
-                    50000 KGS
+                    {price}
                 </h4>
-                <p>{new Date().toString()}</p>
+                <p>{new Date(createdAt).toString()}</p>
             </div>
         </div>
     );

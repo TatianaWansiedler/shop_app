@@ -12,7 +12,17 @@
 .icon-wrapper {
     display: flex;
     align-items: center;
-    gap: 10px
+    gap: 20px
+}
+.icon_btn{
+    border:none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+.icon_btn img{
+    width: 20px;
+    height: 20px;
 }
 .filter-text {
     font-size: 20px
