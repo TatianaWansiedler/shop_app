@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './header.module.css'
 // import Modal from '../Modal/Modal';
 
@@ -15,9 +15,9 @@ const Header = () => {
                     <NavLink to='/' className={styles.link} >Contact</NavLink>
                 </nav>
                 <div className={styles.icons}>
-                    <a href="/" className={styles.icon}>
+                    <NavLink to="/account" className={styles.icon}>
                         <img src="/images/profile-icon.png" alt="" className={styles.icon} />
-                    </a>
+                    </NavLink>
                     <p className={styles.icon}>
                         <img src="/images/search-icon.png" alt="" className={styles.icon} />
                     </p>

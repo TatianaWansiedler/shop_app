@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './filter.module.css'
 
-const Filter = ({setProductView, sort, setSort}) => {
+const Filter = ({setProductView, sort, setSort, itemsPerPage, setTtemsPerPage}) => {
 
     return (
         <div className={styles.filter}>
@@ -18,12 +18,22 @@ const Filter = ({setProductView, sort, setSort}) => {
                     <button className={styles.icon_btn} onClick={()=> setProductView('1')}>
                         <img src="/images/one-item.svg" alt="" />
                     </button>
-                    <p className={styles["amount-text"]}>Showing 1-16 of 32 results</p>
+                    <p className={styles["amount-text"]}>Showing 1-{itemsPerPage} of 16 results</p>
                 </div>
                 <div className={styles.controls}>
                     <p className={styles.amount}>
                         Show
-                        <input type="number" className={styles["amount-number"]}/>    
+                        {/* <input type="number" className={styles["amount-number"]}/> */}
+                        <select 
+                            value={itemsPerPage} 
+                            className={styles["amount-number"]}
+                            defaultValue={'4'}
+                            onChange={e => setTtemsPerPage(+e.target.value)}
+                        >
+                            <option value="4">4</option>
+                            <option value="8">8</option>
+                            <option value="16">16</option>
+                        </select>    
                     </p>
                     <p>
                         Sort by 
