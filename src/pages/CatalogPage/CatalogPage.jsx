@@ -9,7 +9,6 @@ import ReactPaginate from 'react-paginate';
 
 
 
-
 const CatalogPage = () => {
   const [products, setProducts] = useState([])
   const [itemsPerPage, setTtemsPerPage] = useState(4)
@@ -17,7 +16,6 @@ const CatalogPage = () => {
   const [sort, setSort] = useState('price-down')
   const [itemOffset, setItemOffset] = useState(0) 
   const [forcePage, setForcePage] = useState(0)
-  
   
   // const itemsPerPage = 4
   const endOffset = itemOffset + itemsPerPage;
