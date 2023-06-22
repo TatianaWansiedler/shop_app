@@ -5,6 +5,8 @@ import * as yup from 'yup'
 import authService from "../../services/auth"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useDispatch } from "react-redux";
+import { loginSuccess } from "../../redux/authSlice";
 
 
 const registerSchema = yup.object({
@@ -24,14 +26,7 @@ const registerSchema = yup.object({
 
 
 const RegisterForm = ({ styles }) => {
-
-  const successNotif = () => toast.success("Successful!", {
-    autoClose: 2500,
-  });
-  const errorNotif = () => toast.error('User already exists', {
-    autoClose: 2500,
-  });
-
+  const dispatch =useDispatch()
   const formik = useFormik({
     initialValues:{
       email: '',
@@ -41,11 +36,15 @@ const RegisterForm = ({ styles }) => {
     onSubmit: async (values, {resetForm}) => {
       try {
         const resp = await authService.register(values)
-        successNotif()
-        console.log(resp);
+        toast.success("Successful!", {
+          autoClose: 2500,
+        })
+        dispatch(loginSuccess(resp.data))
+
       } catch (error) {
-        console.log(error);
-        errorNotif()
+        toast.error('User already exists', {
+          autoClose: 2500,
+        })
       }
       resetForm()
     },

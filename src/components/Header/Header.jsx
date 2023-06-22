@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import styles from './header.module.css'
-// import Modal from '../Modal/Modal';
+import { useSelector } from 'react-redux';
+import Modal from '../Modal/Modal';
 
 const Header = () => {
+    const user = useSelector(state => state.user.currentUser)
+    const quantity = useSelector(state => state.cart.quantity)
     return (
         <>
         <header>
@@ -15,20 +18,29 @@ const Header = () => {
                     <NavLink to='/' className={styles.link} >Contact</NavLink>
                 </nav>
                 <div className={styles.icons}>
-                    <NavLink to="/account" className={styles.icon}>
-                        <img src="/images/profile-icon.png" alt="" className={styles.icon} />
-                    </NavLink>
+                    {
+                        !user && (
+                            <NavLink to="/account" className={styles.icon}>
+                                <img src="/images/profile-icon.png" alt="" className={styles.icon} />
+                            </NavLink>
+                        )
+                    }
+
                     <p className={styles.icon}>
                         <img src="/images/search-icon.png" alt="" className={styles.icon} />
                     </p>
                     <p className={styles.icon}>
                         <img src="/images/favorite-icon.png" alt="" className={styles.icon} />
                     </p>
-                    <p className={styles.icon}>
-                        <span className={styles.quantity}>1</span>
+                    <Link to="/cart" className={styles.icon}>
+                        {quantity > 0 && <span className={styles.quantity}>{quantity}</span>}
                         <img src="/images/basket-icon.png " alt="" className={styles.icon} />
-                    </p>
+                    </Link>
                 </div>
+                {
+                    user && <div>{user.username}</div>
+                }
+                <Modal/>
             </div>
         </header>
         </>

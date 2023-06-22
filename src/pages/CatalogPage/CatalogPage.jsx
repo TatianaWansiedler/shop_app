@@ -8,7 +8,6 @@ import productService from '../../services/products';
 import ReactPaginate from 'react-paginate';
 
 
-
 const CatalogPage = () => {
   const [products, setProducts] = useState([])
   const [itemsPerPage, setTtemsPerPage] = useState(4)

@@ -7,3 +7,12 @@
 .wrapper * {
     width: calc(100% / 6 - 20px);
 }
+.del_btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.del_btn img{
+    width: 22px;
+    height: 22px;
+}

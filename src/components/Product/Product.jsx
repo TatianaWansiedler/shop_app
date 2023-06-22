@@ -9,7 +9,7 @@ const Product = ({_id, img, title, price, createdAt, productView}) => {
         <div className={styles[`view-${productView}`]}>
             <img src={img} alt="" className={styles.img} />
             <div className={styles.info}>
-                <Link href={`/catalog/${_id}`} className={styles.name}>
+                <Link to={`/catalog/${_id}`} className={styles.name}>
                 {title}
                 </Link>
                 <h4 className={styles.price}>

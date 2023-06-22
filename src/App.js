@@ -6,8 +6,12 @@ import CatalogPage from './pages/CatalogPage/CatalogPage';
 import HomePage from './pages/HomePage/HomePage';
 import AccountPage from './pages/AccountPage/AccountPage';
 import ScrollToTop from './helpers/ScrollToTop';
+import { useSelector } from 'react-redux';
+import SingleProductPage from './pages/SingleProductPage/SingleProductPage';
+import CartPage from './pages/CartPage/CartPage';
 
 function App() {
+  const user = useSelector(({user})=> user.currentUser)
   return (
     <div className="App">
       <ScrollToTop/>
@@ -15,9 +19,12 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/catalog' element={<CatalogPage/>}/>
-          <Route path='/account' element={<AccountPage/>}/>
+          <Route path='/catalog/:id' element={<SingleProductPage/>}/>
+          <Route path='/cart' element={<CartPage/>}/>
+          {
+            !user && <Route path='/account' element={<AccountPage/>}/>
+          }
         </Routes>
-
       <Footer />
     </div>
   );

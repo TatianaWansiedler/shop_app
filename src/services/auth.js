@@ -1,10 +1,15 @@
 import axios from 'axios'
 
-const AUTH_URL = 'https://whispering-river-87788.herokuapp.com/api/register'
+const REGISTER_URL = 'https://whispering-river-87788.herokuapp.com/api/register'
+const LOGIN_URL = 'https://whispering-river-87788.herokuapp.com/api/login'
 
 
 const register = (userInfo) => {
-    return axios.post(AUTH_URL, userInfo)
+    return axios.post(REGISTER_URL, userInfo)
 }
 
-export default { register }
+const login = (userInfo) => {
+    return axios.post(LOGIN_URL, userInfo)
+}
+
+export default { register, login }

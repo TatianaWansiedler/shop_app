@@ -2,10 +2,12 @@ import React from 'react';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs'
 import CartProduct from '../../components/CartProduct/CartProduct';
 import styles from './cartpage.module.css'
+import { useSelector } from 'react-redux';
 
 //4242 4242 4242 4242
 
 const CartPage = () => {
+  const {productsCart, sum} = useSelector(state => state.cart)
     return (
       <>
         <Breadcrumbs  />
@@ -20,15 +22,18 @@ const CartPage = () => {
                 <p className={styles.name}>Subtotal</p>
                 <p className={styles.name}></p>
               </div>
-              <CartProduct />
+              {
+                productsCart.map(product => <CartProduct product={product}/>)
+              }
+              
             </div>
             <div className={styles.totals}>
               <h3 className={styles.title}>Cart totals</h3>
               <p className={styles.subtotal}>
-                Subtotal <span>50000</span>
+                Subtotal <span>{sum}</span>
               </p>
               <p className={styles.total}>
-                Total <span>50000</span>
+                Total <span>{sum}</span>
               </p>
               <a href="/checkout" className={styles.checkout}>Check Out</a>
             </div>
