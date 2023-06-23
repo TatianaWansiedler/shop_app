@@ -42,8 +42,20 @@ const Modal = () => {
             <p className={styles.subtotal}>Subtotal</p> Rs. {sum}
         </div>
         <div className={styles.line}></div>
-            <Link to="/cart" className={styles.link}>View Cart</Link>
-            <a href="/checkout" className={styles.link}>Checkout</a>
+            <Link 
+              to="/cart" 
+              className={styles.link} 
+              onClick={()=>dispatch(closeModal())}
+            >
+              View Cart
+            </Link>
+            <Link 
+              to="/checkout" 
+              className={styles.link} 
+              onClick={()=>dispatch(closeModal())}
+            >
+              Checkout
+            </Link>
         </div>
       </div>
     </div>

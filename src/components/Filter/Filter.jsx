@@ -23,11 +23,9 @@ const Filter = ({setProductView, sort, setSort, itemsPerPage, setTtemsPerPage}) 
                 <div className={styles.controls}>
                     <p className={styles.amount}>
                         Show
-                        {/* <input type="number" className={styles["amount-number"]}/> */}
                         <select 
                             value={itemsPerPage} 
                             className={styles["amount-number"]}
-                            defaultValue={'4'}
                             onChange={e => setTtemsPerPage(+e.target.value)}
                         >
                             <option value="4">4</option>

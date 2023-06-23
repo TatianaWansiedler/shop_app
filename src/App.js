@@ -1,4 +1,3 @@
-import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -9,6 +8,7 @@ import ScrollToTop from './helpers/ScrollToTop';
 import { useSelector } from 'react-redux';
 import SingleProductPage from './pages/SingleProductPage/SingleProductPage';
 import CartPage from './pages/CartPage/CartPage';
+import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
 
 function App() {
   const user = useSelector(({user})=> user.currentUser)
@@ -21,6 +21,7 @@ function App() {
           <Route path='/catalog' element={<CatalogPage/>}/>
           <Route path='/catalog/:id' element={<SingleProductPage/>}/>
           <Route path='/cart' element={<CartPage/>}/>
+          <Route path='/checkout' element={<CheckoutPage/>}/>
           {
             !user && <Route path='/account' element={<AccountPage/>}/>
           }

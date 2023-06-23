@@ -16,10 +16,9 @@ const CatalogPage = () => {
   const [itemOffset, setItemOffset] = useState(0) 
   const [forcePage, setForcePage] = useState(0)
   
-  // const itemsPerPage = 4
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = products.slice(itemOffset, endOffset);
+  // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  const currentItems = products.slice(1).slice(itemOffset, endOffset);
   const pageCount = Math.ceil(products.length / itemsPerPage);
 
   const handlePageClick = (event) => {
@@ -41,7 +40,6 @@ const CatalogPage = () => {
   },[])
 
   useEffect(() => {
-
     if (sort === 'price-down'){
       const sortedByPrice = [...products].sort((a,b)=> a.price - b.price)
       setProducts(sortedByPrice)
@@ -57,7 +55,6 @@ const CatalogPage = () => {
     setForcePage(0)
     setItemOffset(0);
   },[sort])
-
 
   return (
     <div>
@@ -98,7 +95,3 @@ const CatalogPage = () => {
 };
 
 export default CatalogPage;
-
-// 1. Создать состояние для количества элементов - productsPerPage
-//   2. Передавать setter в компонент Filter
-//   3. Менять состояние productsPerPage используя input, select

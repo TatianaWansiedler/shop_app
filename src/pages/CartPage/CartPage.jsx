@@ -3,8 +3,11 @@ import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs'
 import CartProduct from '../../components/CartProduct/CartProduct';
 import styles from './cartpage.module.css'
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 //4242 4242 4242 4242
+
+// pk_test_51LY447HWg33SQmOYkw5NDamYDIC6nmq6E8TuAzs8BFgElOjFEhM8GjZxjoIguoAhF07s5XgS346RXTd4Fx4xz9rX00cYDOothX
 
 const CartPage = () => {
   const {productsCart, sum} = useSelector(state => state.cart)
@@ -35,7 +38,7 @@ const CartPage = () => {
               <p className={styles.total}>
                 Total <span>{sum}</span>
               </p>
-              <a href="/checkout" className={styles.checkout}>Check Out</a>
+              <Link to="/checkout" className={styles.checkout}>Check Out</Link>
             </div>
           </div>
         </section>
