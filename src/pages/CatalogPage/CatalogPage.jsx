@@ -18,7 +18,7 @@ const CatalogPage = () => {
   
   const endOffset = itemOffset + itemsPerPage;
   // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = products.slice(1).slice(itemOffset, endOffset);
+  const currentItems = products.filter(el => !el.title.startsWith('test')).slice(itemOffset, endOffset);
   const pageCount = Math.ceil(products.length / itemsPerPage);
 
   const handlePageClick = (event) => {

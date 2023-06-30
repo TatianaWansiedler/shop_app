@@ -1,0 +1,26 @@
+.container {
+  background: #faf4f4;
+}
+.prod_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+.prod_item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px 98px 30px;
+}
+.prod_item .img {
+  width: 450px;
+  align-self: flex-end;
+}
+.product_title {
+  color: #000;
+  font-size: 32px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+.info {
+  align-self: center;
+}
