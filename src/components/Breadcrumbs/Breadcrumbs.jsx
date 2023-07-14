@@ -8,7 +8,11 @@ const Breadcrumbs = ({title}) => {
 
     return (
         <div className={styles.wrapper}>
-            <img src="/images/breadcrumb-logo.png" alt="" className={styles.icon} />
+            <img
+                src={process.env.PUBLIC_URL + "/images/breadcrumb-logo.png"}
+                alt=""
+                className={styles.icon}
+            />
             <h1>{title}</h1>
             <div className={styles.breadcrumb}>
                <Link className={styles.link_from} to="/">Home</Link> 

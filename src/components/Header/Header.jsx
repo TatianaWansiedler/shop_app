@@ -22,20 +22,36 @@ const Header = () => {
                     {
                         !user && (
                             <NavLink to="/account" className={styles.icon}>
-                                <img src="/images/acc.svg" alt="" className={styles.icon} />
+                                    <img
+                                        src={process.env.PUBLIC_URL + "/images/acc.svg"}
+                                        alt="account_icon"
+                                        className={styles.icon}
+                                    />
                             </NavLink>
                         )
                     }
 
                     <p className={styles.icon}>
-                        <img src="/images/search.svg" alt="" className={styles.icon} />
+                            <img
+                                src={process.env.PUBLIC_URL + "/images/search.svg"}
+                                alt="search_icon"
+                                className={styles.icon}
+                            />
                     </p>
                     <p className={styles.icon}>
-                        <img src="/images/heart.svg" alt="" className={styles.icon} />
+                            <img
+                                src={process.env.PUBLIC_URL + "/images/heart.svg"}
+                                alt="favorite_icon"
+                                className={styles.icon}
+                            />
                     </p>
                     <Link to="/cart" className={styles.icon}>
                         {quantity > 0 && <span className={styles.quantity}>{quantity}</span>}
-                        <img src="/images/cart.svg" alt="" className={styles.icon} />
+                            <img
+                                src={process.env.PUBLIC_URL + "/images/cart.svg"}
+                                alt="cart_icon"
+                                className={styles.icon}
+                            />
                     </Link>
                 </div>
                 {

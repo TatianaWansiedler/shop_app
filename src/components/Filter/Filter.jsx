@@ -7,16 +7,16 @@ const Filter = ({setProductView, sort, setSort, itemsPerPage, setTtemsPerPage}) 
         <div className={styles.filter}>
             <div className={styles.wrapper}>
                 <div className={styles["icon-wrapper"]}>
-                    <img src="/images/filter.svg" alt="" />
+                    <img src={process.env.PUBLIC_URL+"/images/filter.svg"} alt="" />
                     <p className={styles["filter-text"]}>Filter</p>
                     <button className={styles.icon_btn} onClick={()=> setProductView('4')}>
-                        <img src="/images/dots.svg" alt="" />
+                        <img src={process.env.PUBLIC_URL+"/images/dots.svg"} alt="" />
                     </button>
                     <button className={styles.icon_btn} onClick={()=> setProductView('2')}>
-                        <img src="/images/two-item.svg" alt="" />
+                        <img src={process.env.PUBLIC_URL+"/images/two-item.svg"} alt="" />
                     </button>
                     <button className={styles.icon_btn} onClick={()=> setProductView('1')}>
-                        <img src="/images/one-item.svg" alt="" />
+                        <img src={process.env.PUBLIC_URL+"/images/one-item.svg"} alt="" />
                     </button>
                     <p className={styles["amount-text"]}>Showing 1-{itemsPerPage} of 16 results</p>
                 </div>
