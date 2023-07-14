@@ -32,7 +32,7 @@ const TopProducts = () => {
                 }
             </div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <CustLink text={'View More'} />
+                <CustLink text={'View More'} path={ '/catalog' } />
             </div>
         </div>
     );

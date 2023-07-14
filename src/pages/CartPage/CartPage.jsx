@@ -10,7 +10,8 @@ import { Link } from 'react-router-dom';
 // pk_test_51LY447HWg33SQmOYkw5NDamYDIC6nmq6E8TuAzs8BFgElOjFEhM8GjZxjoIguoAhF07s5XgS346RXTd4Fx4xz9rX00cYDOothX
 
 const CartPage = () => {
-  const {productsCart, sum} = useSelector(state => state.cart)
+  const { productsCart, sum } = useSelector(state => state.cart)
+
     return (
       <>
         <Breadcrumbs  />
@@ -26,7 +27,7 @@ const CartPage = () => {
                 <p className={styles.name}></p>
               </div>
               {
-                productsCart.map(product => <CartProduct product={product}/>)
+                productsCart.map(product => <CartProduct key={ product._id } product={product}/>)
               }
               
             </div>

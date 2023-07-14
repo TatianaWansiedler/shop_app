@@ -1,3 +1,5 @@
+This site was built using [GitHub Pages](https://tatianawansiedler.github.io/shop_ap).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

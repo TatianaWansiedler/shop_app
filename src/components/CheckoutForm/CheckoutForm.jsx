@@ -12,12 +12,12 @@ const CheckoutForm = () => {
   const stripe = useStripe()
   const elements = useElements()
 
-  useEffect(()=>{
+  useEffect(() => {
     axios.post("https://whispering-river-87788.herokuapp.com/api/create-payment-intent", {
       total: cart.sum
     })
-    .then(res => setClientSecret(res.data.clientSecret))
-  },[])
+      .then(res => setClientSecret(res.data.clientSecret))
+  }, [])
 
   const pay = (e) => {
     e.preventDefault()
@@ -26,32 +26,32 @@ const CheckoutForm = () => {
         card: elements.getElement(CardElement)
       }
     })
-    .then(res => console.log(res))
+      .then(res => console.log(res))
   }
 
-    return (
-      <>
+  return (
+    <>
       <Breadcrumbs />
       <div className={styles.wrapper}>
-      <form className={styles.card} onSubmit={pay}>
-        <div>
-          <CardElement/>
+        <form className={styles.card} onSubmit={pay}>
+          <div>
+            <CardElement />
+          </div>
+          <button>Pay</button>
+        </form>
+        <div className={styles["product-wrapper"]}>
+          <p className={styles["product-title"]}> Product  <span>Subtotal</span> </p>
+          {
+            cart.productsCart.map(({ title, price, quantity }) => {
+              return <p className={styles["product-name"]}>  {title} X {quantity} <span>Rs. {price * quantity}</span></p>
+            })
+          }
+          <p className={styles["product-subtotal"]}>  Subtotal  <span>Rs.{cart.sum}</span> </p>
+          <p className={styles["product-total"]}> Total  <span>Rs. {cart.sum}</span> </p>
         </div>
-        <button>Pay</button>
-      </form>
-      <div className={styles["product-wrapper"]}>
-        <p className={styles["product-title"]}> Product  <span>Subtotal</span> </p>
-        {
-          cart.productsCart.map(({title, price, quantity}) => {
-            return  <p className={styles["product-name"]}>  {title} X {quantity} <span>Rs. {price*quantity}</span> </p>
-          })
-        }
-        <p className={styles["product-subtotal"]}>  Subtotal  <span>Rs.{cart.sum}</span> </p>
-        <p className={styles["product-total"]}> Total  <span>Rs. {cart.sum}</span> </p>
       </div>
-      </div>
-      </>
-    );
+    </>
+  );
 };
 
 export default CheckoutForm;

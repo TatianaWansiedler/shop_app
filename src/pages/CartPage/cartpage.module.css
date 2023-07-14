@@ -1,66 +1,71 @@
 .cart {
-    padding: 70px 0;
+  padding: 70px 0;
 }
 .wrapper {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 .products {
-    width: 65%;
+  width: 65%;
 }
 .totals {
-    width: 30%;
+  width: 30%;
 }
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FFF9E6;
-    padding: 15px 0;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff9e6;
+  padding: 15px 0;
+  gap: 20px;
 }
 .header p {
-    width: calc(100% / 6 - 20px);
+  width: calc(100% / 6 - 20px);
 }
 .name {
-    font-weight: 500;
+  font-weight: 500;
 }
 .totals {
-    background-color: #FFF9E5;
-    padding: 15px 75px;
+  background-color: #fff9e5;
+  padding: 15px 75px;
 }
 .title {
-    font-size: 32px;
-    text-align: center;
+  font-size: 32px;
+  text-align: center;
 }
-.subtotal, .total {
-    font-weight: 500;
+.subtotal,
+.total {
+  font-weight: 500;
 }
 .subtotal {
-    margin-bottom: 30px;
-    margin-top: 60px;
+  margin-bottom: 30px;
+  margin-top: 60px;
 }
 .total {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .subtotal span {
-    color: #9F9F9F;
+  color: #9f9f9f;
 }
 .total span {
-    color: #B88E2F;
-    font-size: 20px;
+  color: #b88e2f;
+  font-size: 20px;
 }
 .totals span {
-    float: right;
+  float: right;
 }
 .checkout {
-    display: block;
-    margin: auto;
-    border: 1px solid #000000;
-    border-radius: 15px;
-    font-size: 20px;
-    padding: 15px 50px;
-    background-color: transparent; /* transparent - прозрачный */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 15px 50px;
+  background-color: transparent;
+  color: #000;
+  text-decoration: none;
 }
