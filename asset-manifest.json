@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/shop_app/static/css/main.c0e9393a.css",
-    "main.js": "/shop_app/static/js/main.ceebced7.js",
+    "main.css": "/shop_app/static/css/main.455a9484.css",
+    "main.js": "/shop_app/static/js/main.75b7d3f3.js",
     "static/media/breadcrumb-bg.png": "/shop_app/static/media/breadcrumb-bg.f8401e6913f7c3d9a7ca.png",
     "static/media/armchair.png": "/shop_app/static/media/armchair.c6574a048b5bc63b3e7a.png",
     "static/media/follow.png": "/shop_app/static/media/follow.cda6983890ca0f28b1fd.png",
+    "static/media/clock-fill.svg": "/shop_app/static/media/clock-fill.0803ddeb4f1667172b5f734af9e01553.svg",
+    "static/media/loc.svg": "/shop_app/static/media/loc.8189608969dea30b5cb69dacf2d26a03.svg",
+    "static/media/phone.svg": "/shop_app/static/media/phone.ea489178a1c69ddc007c4cd140493718.svg",
     "index.html": "/shop_app/index.html",
-    "main.c0e9393a.css.map": "/shop_app/static/css/main.c0e9393a.css.map",
-    "main.ceebced7.js.map": "/shop_app/static/js/main.ceebced7.js.map"
+    "main.455a9484.css.map": "/shop_app/static/css/main.455a9484.css.map",
+    "main.75b7d3f3.js.map": "/shop_app/static/js/main.75b7d3f3.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0e9393a.css",
-    "static/js/main.ceebced7.js"
+    "static/css/main.455a9484.css",
+    "static/js/main.75b7d3f3.js"
   ]
 }
