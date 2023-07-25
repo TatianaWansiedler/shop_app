@@ -25,7 +25,8 @@
     border: none;
     outline: none;
     font-size: 20px;
-    background-color: rgb(84, 105, 212);
+    background-color: rgba(35, 71, 249, 0.899);
+    color: #fff;
 }
 .product-wrapper {
     width: 40%;

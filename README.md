@@ -1,4 +1,4 @@
-This site was built using [GitHub Pages](https://tatianawansiedler.github.io/shop_ap).
+This site was built using [GitHub Pages](https://tatianawansiedler.github.io/shop_app).
 
 # Getting Started with Create React App
 

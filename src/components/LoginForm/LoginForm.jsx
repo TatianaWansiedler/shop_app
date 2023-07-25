@@ -5,7 +5,7 @@ import authService from "../../services/auth"
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { loginSuccess } from '../../redux/authSlice';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const LoginForm = ({styles}) => {
@@ -62,8 +62,12 @@ const LoginForm = ({styles}) => {
              <div className={styles.controlCheckbox}>
                  <input type="checkbox" name="checkbox" className={styles.checkbox} />
                  <label htmlFor="checkbox" className={styles.labelCheckbox}>Remember me</label>
-             </div>
-             <input type="submit" value="Log In" className={styles.submit} />
+            </div>
+            <div className={styles.controlSubmit}>
+                <input type="submit" value="Log In" className={styles.submit} />
+                <Link className={styles.link_forgot} to={'/'}>Lost Your Password?</Link>
+            </div>
+             
         </form>
     );
 };

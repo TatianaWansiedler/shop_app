@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    gap: 30px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 70px;
+    width: 50%;
+}
+.submit {
+    align-self: center;
+    padding: 15px 80px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.contacts {
+    padding: 70px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.item {
+    display: flex;
+    gap: 30px;
+}
+.item img {
+    align-self: flex-start;
+}
+.item h4 {
+    font-size: 24px;
+    font-weight: 500;
+}
+.item p {
+    max-width: 220px;
+    font-size: 16px;
+    font-weight: 400;
+}

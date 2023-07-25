@@ -10,56 +10,56 @@ const Header = () => {
     const location = useLocation()
     return (
         <>
-            <header style={{ background:location.pathname === '/' ? '#FBEBB5' : 'transparent'}}>
-            <div className={styles.wrapper}>
-                <nav className={styles.nav}>
-                    <NavLink to='/' className={styles.link} >Home</NavLink>
-                    <NavLink to='/catalog' className={styles.link} >Shop</NavLink>
-                    <NavLink  to='/' className={styles.link} >About</NavLink>
-                    <NavLink to='/' className={styles.link} >Contact</NavLink>
-                </nav>
-                <div className={styles.icons}>
-                    {
-                        !user && (
-                            <NavLink to="/account" className={styles.icon}>
+            <header style={{ background: location.pathname === '/' ? '#FBEBB5' : 'transparent' }}>
+                <div className={styles.wrapper}>
+                    <nav className={styles.nav}>
+                        <NavLink to='/' className={styles.link} >Home</NavLink>
+                        <NavLink to='/catalog' className={styles.link} >Shop</NavLink>
+                        <NavLink to='/blog' className={styles.link} >Blog</NavLink>
+                        <NavLink to='/contact' className={styles.link} >Contact</NavLink>
+                    </nav>
+                    <div className={styles.icons}>
+                        {
+                            !user && (
+                                <NavLink to="/account" className={styles.icon}>
                                     <img
                                         src={process.env.PUBLIC_URL + "/images/acc.svg"}
                                         alt="account_icon"
                                         className={styles.icon}
                                     />
-                            </NavLink>
-                        )
-                    }
+                                </NavLink>
+                            )
+                        }
 
-                    <p className={styles.icon}>
+                        <p className={styles.icon}>
                             <img
                                 src={process.env.PUBLIC_URL + "/images/search.svg"}
                                 alt="search_icon"
                                 className={styles.icon}
                             />
-                    </p>
-                    <p className={styles.icon}>
+                        </p>
+                        <p className={styles.icon}>
                             <img
                                 src={process.env.PUBLIC_URL + "/images/heart.svg"}
                                 alt="favorite_icon"
                                 className={styles.icon}
                             />
-                    </p>
-                    <Link to="/cart" className={styles.icon}>
-                        {quantity > 0 && <span className={styles.quantity}>{quantity}</span>}
+                        </p>
+                        <Link to="/cart" className={styles.icon}>
+                            {quantity > 0 && <span className={styles.quantity}>{quantity}</span>}
                             <img
                                 src={process.env.PUBLIC_URL + "/images/cart.svg"}
                                 alt="cart_icon"
                                 className={styles.icon}
                             />
-                    </Link>
+                        </Link>
+                    </div>
+                    {
+                        user && <div>{user.username}</div>
+                    }
+                    <Modal />
                 </div>
-                {
-                    user && <div>{user.username}</div>
-                }
-                <Modal/>
-            </div>
-        </header>
+            </header>
         </>
     );
 };

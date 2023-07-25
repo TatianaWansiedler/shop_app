@@ -9,23 +9,27 @@ import { useSelector } from 'react-redux';
 import SingleProductPage from './pages/SingleProductPage/SingleProductPage';
 import CartPage from './pages/CartPage/CartPage';
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import BlogPage from './pages/BlogPage/BlogPage';
 
 function App() {
-  const user = useSelector(({user})=> user.currentUser)
+  const user = useSelector(({ user }) => user.currentUser)
   return (
     <div className="App">
-      <ScrollToTop/>
+      <ScrollToTop />
       <Header />
-        <Routes>
-          <Route path='/' element={<HomePage/>}/>
-          <Route path='/catalog' element={<CatalogPage/>}/>
-          <Route path='/catalog/:id' element={<SingleProductPage/>}/>
-          <Route path='/cart' element={<CartPage/>}/>
-          <Route path='/checkout' element={<CheckoutPage/>}/>
-          {
-            !user && <Route path='/account' element={<AccountPage/>}/>
-          }
-        </Routes>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/catalog' element={<CatalogPage />} />
+        <Route path='/catalog/:id' element={<SingleProductPage />} />
+        <Route path='/cart' element={<CartPage />} />
+        <Route path='/checkout' element={<CheckoutPage />} />
+        {
+          !user && <Route path='/account' element={<AccountPage />} />
+        }
+        <Route path='/blog' element={<BlogPage/>} />
+        <Route path='/contact' element={<ContactPage/>} />
+      </Routes>
       <Footer />
     </div>
   );

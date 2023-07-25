@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styles from './checkout.module.css'
-import Breadcrumbs from '../Breadcrumbs/Breadcrumbs';
 import { useSelector } from 'react-redux';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { useEffect } from 'react';
@@ -31,7 +30,7 @@ const CheckoutForm = () => {
 
   return (
     <>
-      <Breadcrumbs />
+      
       <div className={styles.wrapper}>
         <form className={styles.card} onSubmit={pay}>
           <div>
