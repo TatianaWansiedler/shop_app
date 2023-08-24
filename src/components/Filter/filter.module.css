@@ -1,40 +1,40 @@
 .filter {
     margin-top: 50px;
-    background: #FAF4F4
+    background: #faf4f4;
 }
 .wrapper {
     width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 20px 0
+    padding: 20px 0;
 }
 .icon-wrapper {
     display: flex;
     align-items: center;
-    gap: 20px
+    gap: 20px;
 }
-.icon_btn{
-    border:none;
+.icon_btn {
+    border: none;
     outline: none;
     background: transparent;
     cursor: pointer;
 }
-.icon_btn img{
+.icon_btn img {
     width: 20px;
     height: 20px;
 }
 .filter-text {
-    font-size: 20px
+    font-size: 20px;
 }
 .amount-text {
     padding-left: 34px;
-    border-left: 2px solid #9F9F9F;
-    margin-left: 30px
+    border-left: 2px solid #9f9f9f;
+    margin-left: 30px;
 }
 .controls {
     display: flex;
-    align-items: center
+    align-items: center;
 }
 .amount-number {
     width: 55px;
@@ -42,10 +42,8 @@
     margin-left: 20px;
     font-size: 16px;
     text-align: center;
-    border: 1px solid rgb(211, 211, 211);
-    border-radius: 10px;
     outline: none;
-    color: #9F9F9F;
+    color: #9f9f9f;
     padding: 0;
 }
 .amount {
@@ -57,6 +55,8 @@ select {
     outline: none;
     padding: 0 30px;
     font-size: 16px;
-    color: #9F9F9F;
-    margin-left: 20px
+    color: #9f9f9f;
+    margin-left: 20px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
 }

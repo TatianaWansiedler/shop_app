@@ -30,7 +30,7 @@ const CheckoutForm = () => {
 
   return (
     <>
-      
+
       <div className={styles.wrapper}>
         <form className={styles.card} onSubmit={pay}>
           <div>
@@ -42,11 +42,19 @@ const CheckoutForm = () => {
           <p className={styles["product-title"]}> Product  <span>Subtotal</span> </p>
           {
             cart.productsCart.map(({ title, price, quantity }) => {
-              return <p className={styles["product-name"]}>  {title} X {quantity} <span>Rs. {price * quantity}</span></p>
+              return (
+                <p className={styles["product-name"]}>
+                  {title} X {quantity} <span>Rs. {price * quantity}</span>
+                </p>
+              )
             })
           }
-          <p className={styles["product-subtotal"]}>  Subtotal  <span>Rs.{cart.sum}</span> </p>
-          <p className={styles["product-total"]}> Total  <span>Rs. {cart.sum}</span> </p>
+          <p className={styles["product-subtotal"]}>
+            Subtotal  <span>Rs.{cart.sum}</span>
+          </p>
+          <p className={styles["product-total"]}>
+            Total  <span>Rs. {cart.sum}</span>
+          </p>
         </div>
       </div>
     </>

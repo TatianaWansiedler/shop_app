@@ -3,7 +3,6 @@ import productService from '../../services/products';
 import Product from '../Product/Product';
 import styles from './topProducts.module.css'
 import CustLink from '../CustLink/CustLink';
-// Выводим категории и их картинку /api/categories 
  
 const TopProducts = () => {
     const [topProducts, setTopProducts] = useState()
@@ -22,7 +21,6 @@ const TopProducts = () => {
             <p className={ styles.subtitle}>Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</p>
             <div className={ styles.products_wrapper}>
                 {
-                    // hardcode so far
                    topProducts && topProducts.filter((item, i) => i < 4).map(item => 
                         <Product 
                             key={item._id} 

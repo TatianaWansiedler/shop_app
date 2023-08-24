@@ -7,7 +7,7 @@ const Product = ({_id, img, title, price, createdAt, productView}) => {
 
     return (
         <div className={styles[`view-${productView}`]}>
-            <img src={img} alt="" className={styles.img} />
+            <img src={img} alt={"product_image"} className={styles.img} />
             <div className={styles.info}>
                 <Link to={`/catalog/${_id}`} className={styles.name}>
                 {title}

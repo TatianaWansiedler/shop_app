@@ -3,6 +3,8 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import styles from './header.module.css'
 import { useSelector } from 'react-redux';
 import Modal from '../Modal/Modal';
+import icon_acc from '../../assets/acc.svg'
+import icon_cart from '../../assets/cart.svg'
 
 const Header = () => {
     const user = useSelector(state => state.user.currentUser)
@@ -10,7 +12,14 @@ const Header = () => {
     const location = useLocation()
     return (
         <>
-            <header style={{ background: location.pathname === '/' ? '#FBEBB5' : 'transparent' }}>
+            <header style={
+                {
+                    background: location.pathname === '/'
+                        ? '#FBEBB5'
+                        : 'transparent'
+                }
+            }
+            >
                 <div className={styles.wrapper}>
                     <nav className={styles.nav}>
                         <NavLink to='/' className={styles.link} >Home</NavLink>
@@ -23,32 +32,27 @@ const Header = () => {
                             !user && (
                                 <NavLink to="/account" className={styles.icon}>
                                     <img
-                                        src={process.env.PUBLIC_URL + "/images/acc.svg"}
+                                        src={icon_acc}
                                         alt="account_icon"
                                         className={styles.icon}
                                     />
                                 </NavLink>
                             )
                         }
-
-                        <p className={styles.icon}>
-                            <img
-                                src={process.env.PUBLIC_URL + "/images/search.svg"}
-                                alt="search_icon"
-                                className={styles.icon}
-                            />
-                        </p>
-                        <p className={styles.icon}>
-                            <img
-                                src={process.env.PUBLIC_URL + "/images/heart.svg"}
-                                alt="favorite_icon"
-                                className={styles.icon}
-                            />
-                        </p>
                         <Link to="/cart" className={styles.icon}>
-                            {quantity > 0 && <span className={styles.quantity}>{quantity}</span>}
+                            {
+                                quantity > 0 && (
+                                    <span className={
+                                        location.pathname === '/'
+                                            ? `${styles.quantity} ${styles.quantity_white}`
+                                            : styles.quantity
+                                    }
+                                    >
+                                        {quantity}
+                                    </span>)
+                            }
                             <img
-                                src={process.env.PUBLIC_URL + "/images/cart.svg"}
+                                src={icon_cart}
                                 alt="cart_icon"
                                 className={styles.icon}
                             />

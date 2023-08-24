@@ -17,7 +17,6 @@ const CatalogPage = () => {
   const [forcePage, setForcePage] = useState(0)
   
   const endOffset = itemOffset + itemsPerPage;
-  // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = products.filter(el => !el.title.startsWith('test')).slice(itemOffset, endOffset);
   const pageCount = Math.ceil(products.length / itemsPerPage);
 

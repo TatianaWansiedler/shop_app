@@ -27,8 +27,8 @@ function App() {
         {
           !user && <Route path='/account' element={<AccountPage />} />
         }
-        <Route path='/blog' element={<BlogPage/>} />
-        <Route path='/contact' element={<ContactPage/>} />
+        <Route path='/blog' element={<BlogPage />} />
+        <Route path='/contact' element={<ContactPage />} />
       </Routes>
       <Footer />
     </div>

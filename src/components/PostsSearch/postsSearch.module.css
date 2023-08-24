@@ -1,0 +1,25 @@
+.container {
+    width: 30%;
+}
+.title {
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.categories {
+    max-width: 80%;
+    margin: 40px auto;
+}
+.categories_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.category_item {
+    display: flex;
+    justify-content: space-between;
+    color: #9f9f9f;
+    font-size: 16px;
+    font-weight: 400;
+}

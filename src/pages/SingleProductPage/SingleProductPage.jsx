@@ -6,16 +6,16 @@ import { useParams } from 'react-router-dom';
 
 const SingleProductPage = () => {
     const [product, setProduct] = useState({})
-    const {id} = useParams()
+    const { id } = useParams()
 
-    useEffect(()=>{
+    useEffect(() => {
         productService.getProduct(id)
-        .then(res=> setProduct(res.data))
-    },[])
+            .then(res => setProduct(res.data))
+    }, [])
 
     return (
         <div>
-            <SingleProductCard product={product}/>
+            <SingleProductCard product={product} />
         </div>
     );
 };

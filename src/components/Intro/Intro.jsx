@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './intro.module.css'
-import img from './armchair.png'
+import img from '../../assets/armchair.png'
 import CustLink from '../CustLink/CustLink';
 const Intro = () => {
     return (

@@ -1,0 +1,32 @@
+.post {
+}
+.post_img {
+    max-width: 100%;
+}
+.actions {
+    display: flex;
+    gap: 35px;
+    margin: 15px 0;
+}
+.actions_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9f9f9f;
+    font-size: 16px;
+    font-weight: 400;
+}
+.title {
+    color: #000;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.descr {
+    color: #9f9f9f;
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 30px;
+}

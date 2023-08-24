@@ -12,12 +12,12 @@ const CheckoutPage = () => {
   return (
     <>
       <Breadcrumbs title={'Checkout'} />
-        <Elements stripe={stripePromise}>
-          <CheckoutForm/>
-        </Elements>
-        <Info/>
-      </>
-    );
+      <Elements stripe={stripePromise}>
+        <CheckoutForm />
+      </Elements>
+      <Info />
+    </>
+  );
 };
 
 export default CheckoutPage;

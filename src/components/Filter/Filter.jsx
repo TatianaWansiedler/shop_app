@@ -1,5 +1,10 @@
 import React from 'react';
-import styles from './filter.module.css'
+import styles from './filter.module.css';
+import filter from '../../assets/filter.svg';
+import dots from '../../assets/dots.svg';
+import two_item from '../../assets/two-item.svg';
+import one_item from '../../assets/one-item.svg';
+
 
 const Filter = ({setProductView, sort, setSort, itemsPerPage, setTtemsPerPage}) => {
 
@@ -7,16 +12,16 @@ const Filter = ({setProductView, sort, setSort, itemsPerPage, setTtemsPerPage}) 
         <div className={styles.filter}>
             <div className={styles.wrapper}>
                 <div className={styles["icon-wrapper"]}>
-                    <img src={process.env.PUBLIC_URL+"/images/filter.svg"} alt="" />
+                    <img src={filter} alt="filter_icon" />
                     <p className={styles["filter-text"]}>Filter</p>
                     <button className={styles.icon_btn} onClick={()=> setProductView('4')}>
-                        <img src={process.env.PUBLIC_URL+"/images/dots.svg"} alt="" />
+                        <img src={dots} alt="dots_icon" />
                     </button>
                     <button className={styles.icon_btn} onClick={()=> setProductView('2')}>
-                        <img src={process.env.PUBLIC_URL+"/images/two-item.svg"} alt="" />
+                        <img src={two_item} alt="two_item_icon" />
                     </button>
                     <button className={styles.icon_btn} onClick={()=> setProductView('1')}>
-                        <img src={process.env.PUBLIC_URL+"/images/one-item.svg"} alt="" />
+                        <img src={one_item} alt="one_item_icon" />
                     </button>
                     <p className={styles["amount-text"]}>Showing 1-{itemsPerPage} of 16 results</p>
                 </div>

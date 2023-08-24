@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './cartproduct.module.css';
 import { useDispatch } from 'react-redux';
 import { deleteFromCart } from '../../redux/cartSlice';
+import delete_icon from '../../assets/delete-icon.png'
 
 const CartProduct = ({product}) => {
     const dispatch = useDispatch()
@@ -16,7 +17,7 @@ const CartProduct = ({product}) => {
                 className={styles.del_btn}
                 onClick={()=>dispatch(deleteFromCart(product._id))}
             >
-                <img src="images/delete-icon.png" alt="" />
+                <img src={delete_icon} alt="delete_icon" />
             </button>
         </div>
     );
