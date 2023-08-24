@@ -1,19 +1,30 @@
 {
   "files": {
-    "main.css": "/shop_app/static/css/main.455a9484.css",
-    "main.js": "/shop_app/static/js/main.75b7d3f3.js",
+    "main.css": "/shop_app/static/css/main.87aa4468.css",
+    "main.js": "/shop_app/static/js/main.d5630886.js",
+    "static/media/post1.png": "/shop_app/static/media/post1.f5bf94abfc07493549da.png",
     "static/media/breadcrumb-bg.png": "/shop_app/static/media/breadcrumb-bg.f8401e6913f7c3d9a7ca.png",
     "static/media/armchair.png": "/shop_app/static/media/armchair.c6574a048b5bc63b3e7a.png",
     "static/media/follow.png": "/shop_app/static/media/follow.cda6983890ca0f28b1fd.png",
+    "static/media/cart.svg": "/shop_app/static/media/cart.f9162a968759ad73ebcaadc8ce333038.svg",
+    "static/media/dots.svg": "/shop_app/static/media/dots.312721e9dd7bdf71e60081d34972858b.svg",
+    "static/media/filter.svg": "/shop_app/static/media/filter.ae2ed712532c7936b4e9646fb935c7db.svg",
+    "static/media/one-item.svg": "/shop_app/static/media/one-item.947a07273d14831a8d887b83014678c5.svg",
+    "static/media/lable.svg": "/shop_app/static/media/lable.e23678dbe5c66922a5524c8e210c1b81.svg",
+    "static/media/acc.svg": "/shop_app/static/media/acc.7ce1c01d5b683c3ab8078c116b8d7f1b.svg",
     "static/media/clock-fill.svg": "/shop_app/static/media/clock-fill.0803ddeb4f1667172b5f734af9e01553.svg",
     "static/media/loc.svg": "/shop_app/static/media/loc.8189608969dea30b5cb69dacf2d26a03.svg",
     "static/media/phone.svg": "/shop_app/static/media/phone.ea489178a1c69ddc007c4cd140493718.svg",
     "index.html": "/shop_app/index.html",
-    "main.455a9484.css.map": "/shop_app/static/css/main.455a9484.css.map",
-    "main.75b7d3f3.js.map": "/shop_app/static/js/main.75b7d3f3.js.map"
+    "static/media/date.svg": "/shop_app/static/media/date.fd9007383aae62d253c5fa0db6730f75.svg",
+    "static/media/role.svg": "/shop_app/static/media/role.a9d7d103a4e0029a59dbb60ac029d263.svg",
+    "static/media/search.svg": "/shop_app/static/media/search.71cf7ff0ef9fcfc2895589eacc300d4f.svg",
+    "static/media/two-item.svg": "/shop_app/static/media/two-item.ea7fa50ae0f57ec3e1d0e9338537c175.svg",
+    "main.87aa4468.css.map": "/shop_app/static/css/main.87aa4468.css.map",
+    "main.d5630886.js.map": "/shop_app/static/js/main.d5630886.js.map"
   },
   "entrypoints": [
-    "static/css/main.455a9484.css",
-    "static/js/main.75b7d3f3.js"
+    "static/css/main.87aa4468.css",
+    "static/js/main.d5630886.js"
   ]
 }
