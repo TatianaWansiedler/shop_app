@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shop_app/static/css/main.87aa4468.css",
-    "main.js": "/shop_app/static/js/main.d5630886.js",
+    "main.css": "/shop_app/static/css/main.5ae48c89.css",
+    "main.js": "/shop_app/static/js/main.ca1f2233.js",
     "static/media/post1.png": "/shop_app/static/media/post1.f5bf94abfc07493549da.png",
     "static/media/breadcrumb-bg.png": "/shop_app/static/media/breadcrumb-bg.f8401e6913f7c3d9a7ca.png",
     "static/media/armchair.png": "/shop_app/static/media/armchair.c6574a048b5bc63b3e7a.png",
@@ -16,15 +16,16 @@
     "static/media/loc.svg": "/shop_app/static/media/loc.8189608969dea30b5cb69dacf2d26a03.svg",
     "static/media/phone.svg": "/shop_app/static/media/phone.ea489178a1c69ddc007c4cd140493718.svg",
     "index.html": "/shop_app/index.html",
+    "static/media/cart-plus-solid.svg": "/shop_app/static/media/cart-plus-solid.6e2fa79e1499682f9e8f2d8ae1e54ca8.svg",
     "static/media/date.svg": "/shop_app/static/media/date.fd9007383aae62d253c5fa0db6730f75.svg",
     "static/media/role.svg": "/shop_app/static/media/role.a9d7d103a4e0029a59dbb60ac029d263.svg",
     "static/media/search.svg": "/shop_app/static/media/search.71cf7ff0ef9fcfc2895589eacc300d4f.svg",
     "static/media/two-item.svg": "/shop_app/static/media/two-item.ea7fa50ae0f57ec3e1d0e9338537c175.svg",
-    "main.87aa4468.css.map": "/shop_app/static/css/main.87aa4468.css.map",
-    "main.d5630886.js.map": "/shop_app/static/js/main.d5630886.js.map"
+    "main.5ae48c89.css.map": "/shop_app/static/css/main.5ae48c89.css.map",
+    "main.ca1f2233.js.map": "/shop_app/static/js/main.ca1f2233.js.map"
   },
   "entrypoints": [
-    "static/css/main.87aa4468.css",
-    "static/js/main.d5630886.js"
+    "static/css/main.5ae48c89.css",
+    "static/js/main.ca1f2233.js"
   ]
 }
