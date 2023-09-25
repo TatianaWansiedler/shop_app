@@ -12,7 +12,7 @@ const SingleProductCard = ({ product }) => {
     <div className={styles.card}>
       <div className={styles.wrapper}>
         <div className={styles["img-wrapper"]}>
-          <img src={product.img} alt={product.title} />
+          <img src={product.images} alt={product.title} />
         </div>
         <div className={styles.info}>
           <h1 className={styles.title}>{product.title}</h1>
@@ -27,18 +27,18 @@ const SingleProductCard = ({ product }) => {
                 -
               </button>
               <span>{quantity}</span>
-              <button 
+              <button
                 className={styles["quantity-control"]}
                 onClick={(e) => setQuantity(quantity + 1)}
               >
                 +
-            </button>
+              </button>
             </div>
-            <button 
-                className={styles.add}
-                onClick={()=>dispatch(addToCart({...product, quantity}))}
+            <button
+              className={styles.add}
+              onClick={() => dispatch(addToCart({ ...product, quantity }))}
             >
-                Add To Cart
+              Add To Cart
             </button>
           </div>
         </div>

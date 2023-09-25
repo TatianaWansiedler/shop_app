@@ -10,14 +10,14 @@ import ReactPaginate from 'react-paginate';
 
 const CatalogPage = () => {
   const [products, setProducts] = useState([])
-  const [itemsPerPage, setTtemsPerPage] = useState(4)
+  const [itemsPerPage, setTtemsPerPage] = useState(8)
   const [productView, setProductView] = useState('4')
   const [sort, setSort] = useState('price-down')
-  const [itemOffset, setItemOffset] = useState(0) 
+  const [itemOffset, setItemOffset] = useState(0)
   const [forcePage, setForcePage] = useState(0)
-  
+
   const endOffset = itemOffset + itemsPerPage;
-  const currentItems = products.filter(el => !el.title.startsWith('test')).slice(itemOffset, endOffset);
+  const currentItems = products.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(products.length / itemsPerPage);
 
   const handlePageClick = (event) => {
@@ -29,65 +29,66 @@ const CatalogPage = () => {
     setItemOffset(newOffset);
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     productService
       .getProducts()
       .then(res => {
-        const sortedByPrice = res.data.sort((a,b)=> a.price - b.price)
+        const sortedByPrice = res.data.sort((a, b) => a.price - b.price)
         setProducts(sortedByPrice)
       })
-  },[])
+  }, [])
 
   useEffect(() => {
-    if (sort === 'price-down'){
-      const sortedByPrice = [...products].sort((a,b)=> a.price - b.price)
+    if (sort === 'price-down') {
+      const sortedByPrice = [...products].sort((a, b) => a.price - b.price)
       setProducts(sortedByPrice)
-    } 
-    else if(sort === 'price-up'){
-      const sortedByPrice = [...products].sort((a,b)=> b.price - a.price)
+    }
+    else if (sort === 'price-up') {
+      const sortedByPrice = [...products].sort((a, b) => b.price - a.price)
       setProducts(sortedByPrice)
-    } 
+    }
     else if (sort === 'newest') {
-      const sortedByDate = [...products].sort((a,b)=> new Date(b.createdAt) - new Date(a.createdAt))
+      const sortedByDate = [...products].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
       setProducts(sortedByDate)
     }
     setForcePage(0)
     setItemOffset(0);
-  },[sort])
+  }, [sort])
 
   return (
     <div>
-      <Breadcrumbs title='Shop'/>
-      <Filter 
-        setProductView={setProductView} 
-        sort={sort} setSort={setSort} 
+      <Breadcrumbs title='Shop' />
+      <Filter
+        setProductView={setProductView}
+        sort={sort} setSort={setSort}
         setTtemsPerPage={setTtemsPerPage}
         itemsPerPage={itemsPerPage}
+        prodLen={products.length}
       />
       <div className={styles["products-wrapper"]}>
         {
-          currentItems.map(el => 
-          <Product 
-            key={el._id} 
-            {...el}
-            productView={productView}
-          />)
+          currentItems.map(el =>
+            <Product
+              key={el.id}
+              {...el}
+              productView={productView}
+            />)
         }
       </div>
       <ReactPaginate
-          forcePage={forcePage}
-          breakLabel="..."
-          nextLabel="next >"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={pageCount}
-          previousLabel=""
-          renderOnZeroPageCount={null}
-          containerClassName={styles["pagination-wrapper"]}
-          pageLinkClassName = {styles["pagination-page"]}
-          nextClassName={styles["pagination-next"]}
-          activeLinkClassName={styles["pagination-active"]}
-        />
+        forcePage={forcePage}
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel=""
+        renderOnZeroPageCount={null}
+        containerClassName={styles["pagination-wrapper"]}
+        pageLinkClassName={styles["pagination-page"]}
+        nextClassName={styles["pagination-next"]}
+        activeLinkClassName={styles["pagination-active"]}
+      />
       <Info />
     </div>
   );

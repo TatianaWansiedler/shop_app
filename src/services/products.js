@@ -1,9 +1,12 @@
 import axios from 'axios'
 
-const PRODUCTS_URL = 'https://whispering-river-87788.herokuapp.com/api/products'
-const PRODUCT_URL = 'https://whispering-river-87788.herokuapp.com/api/product/'
-const NEW_PRODUCT_URL = 'https://whispering-river-87788.herokuapp.com/api/products?new'
-const CATEGORY_URL = 'https://whispering-river-87788.herokuapp.com/api/categories'
+// const PRODUCTS_URL = 'https://whispering-river-87788.herokuapp.com/api/products'
+const PRODUCTS_URL = 'https://api.escuelajs.co/api/v1/products?offset=0&limit=30'
+// const PRODUCT_URL = 'https://whispering-river-87788.herokuapp.com/api/product/'
+const PRODUCT_URL = 'https://api.escuelajs.co/api/v1/products/'
+// const NEW_PRODUCT_URL = 'https://whispering-river-87788.herokuapp.com/api/products?new'
+const NEW_PRODUCT_URL = 'https://api.escuelajs.co/api/v1/products?offset=31&limit=100'
+
 
 
 const getProducts = () => {
@@ -17,7 +20,5 @@ const getProduct = (id) => {
 const getNewProduct = () => {
     return axios.get(NEW_PRODUCT_URL)
 }
-const getCategory = () => {
-    return axios.get(CATEGORY_URL)
-}
+
 export default { getProducts, getProduct, getNewProduct }

@@ -1,12 +1,16 @@
-.view-4{
+.view-4 {
     width: calc(25% - 30px);
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: flex-start;
+    gap: 10px;
 }
 .img {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
 }
 .name {
     color: black;
@@ -15,8 +19,27 @@
 .price {
     margin-top: 10px;
     font-size: 24px;
+    font-weight: 500;
     margin-top: auto;
 }
+.info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+.actions{
+    display: flex;
+    justify-content: space-between;
+}
+.add_btn {
+    border: none;
+    outline: none;
+    background: none;
+    margin-right: 10px;
+}
+
 .card-list {
     width: 100%;
     display: flex;
@@ -25,13 +48,13 @@
     gap: 40px;
 }
 
-.view-2{
+.view-2 {
     width: calc(50% - 30px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.view-1{
+.view-1 {
     width: 100%;
     display: flex;
     justify-content: center;

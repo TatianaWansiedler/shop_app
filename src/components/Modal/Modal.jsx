@@ -27,13 +27,13 @@ const Modal = () => {
           <div className={styles.products}>
             {productsCart.map((product) => {
               return (
-                <div className={styles.product} key={product._id}>
-                  <img src={product.img} alt={product.title} className={styles.img} />
+                <div className={styles.product} key={product.id}>
+                  <img src={product.images[0]} alt={product.title} className={styles.img} />
                   <div className={styles.info}>
                     <h5 className={styles.name}>{product.title}</h5>
                     <p>{product.quantity} x Rs. {product.price}</p>
                   </div>
-                  <button className={styles.del_btn} onClick={() => dispatch(deleteFromCart(product._id))}>
+                  <button className={styles.del_btn} onClick={() => dispatch(deleteFromCart(product.id))}>
                     <img src={close_icon} alt="close-icon" />
                   </button>
                 </div>

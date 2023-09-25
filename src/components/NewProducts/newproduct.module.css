@@ -1,18 +1,23 @@
 .container {
   background: #faf4f4;
+  
 }
 .prod_items {
+  width: 95%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  gap: 30px;
+  padding: 98px 0;
 }
 .prod_item {
   display: flex;
   flex-direction: column;
-  padding: 0 30px 98px 30px;
+  align-items:center
 }
 .prod_item .img {
-  width: 450px;
-  align-self: flex-end;
+  width: 60%;
+  border-radius: 50%;
 }
 .product_title {
   color: #000;
@@ -21,6 +26,4 @@
   text-decoration: none;
   margin-bottom: 40px;
 }
-.info {
-  align-self: center;
-}
+

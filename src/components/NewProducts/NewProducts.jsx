@@ -5,30 +5,32 @@ import CustLink from '../CustLink/CustLink';
 
 
 const NewProducts = () => {
-    const [newProducts, setNewProducts] = useState()
-    useEffect(() => { 
+    const [newProducts, setNewProducts] = useState([])
+
+    useEffect(() => {
         productService
             .getNewProduct()
-            .then(res => { 
-                const random_sort_data =
-                    res.data.filter(el => !el.title.startsWith('test'))
-                            .sort(() => { return Math.random() - 0.5 })
+            .then(res => {
+                const random_sort_data = res.data.sort(() => { return Math.random() - 0.5 })
                 setNewProducts(random_sort_data)
             })
     }, [])
 
     return (
         <div className={styles.container}>
-            <div className={ styles.prod_items}>
+            <div className={styles.prod_items}>
                 {
-                    newProducts && newProducts.filter((item, i) => i < 2).map(({ _id, title, img }) =>
-                        <div key={_id} className={ styles.prod_item}>
-                            <img src={img} alt={title} className={styles.img} />
-                            <div className={ styles.info }>
+                    newProducts && newProducts.filter((_, i) => i < 2).map(({ id, title, images }) =>
+                        <div key={id} className={styles.prod_item}>
+                            <img src={images[0]} alt={title} className={styles.img} />
+                            <div className={styles.info}>
                                 <p className={styles.product_title}>
                                     {title}
                                 </p>
-                                <CustLink text={'View More'} path={`/catalog/${_id}`} />
+                                <CustLink
+                                    text={'View More'}
+                                    path={`/catalog/${id}`}
+                                />
                             </div>
                         </div>
                     )

@@ -28,7 +28,7 @@ const CartPage = () => {
               <p className={styles.name}></p>
             </div>
             {
-              productsCart.map(product => <CartProduct key={product._id} product={product} />)
+              productsCart.map(product => <CartProduct key={product.id} product={product} />)
             }
 
           </div>

@@ -27,7 +27,11 @@ const Header = () => {
                         <NavLink to='/blog' className={styles.link} >Blog</NavLink>
                         <NavLink to='/contact' className={styles.link} >Contact</NavLink>
                     </nav>
+
                     <div className={styles.icons}>
+                        {
+                            user && <div style={{ fontSize: '26px' }}>{user.name}</div>
+                        }
                         {
                             !user && (
                                 <NavLink to="/account" className={styles.icon}>
@@ -58,9 +62,6 @@ const Header = () => {
                             />
                         </Link>
                     </div>
-                    {
-                        user && <div>{user.username}</div>
-                    }
                     <Modal />
                 </div>
             </header>

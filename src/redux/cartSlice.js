@@ -12,7 +12,7 @@ const cartSlice = createSlice({
         addToCart: (state, { payload }) => {
             state.isOpen = true
             state.sum += payload.price * payload.quantity
-            const productsIndex = state.productsCart.findIndex(({ _id }) => _id === payload._id)
+            const productsIndex = state.productsCart.findIndex(({ id }) => id === payload.id)
 
             if (productsIndex === -1) {
                 state.productsCart.push(payload)
@@ -25,7 +25,7 @@ const cartSlice = createSlice({
             state.isOpen = false
         },
         deleteFromCart: (state, { payload }) => {
-            const currentIndex = state.productsCart.findIndex(({ _id }) => _id === payload)
+            const currentIndex = state.productsCart.findIndex(({ id }) => id === payload)
             state.sum -= (
                 state.productsCart[currentIndex].price
                 * state.productsCart[currentIndex].quantity
